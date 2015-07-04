@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ben_the_shark
+  pool: 5
+  username: ben_the_shark
+  password: sharky
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: ben_the_shark_test
+  pool: 5
+  username: ben_the_shark
+  password: sharky
