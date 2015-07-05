@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'pg', '~> 0.18.2'
+gem 'nokogiri', '~> 1.6.6'
+gem 'htmlentities', '~> 4.3.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
