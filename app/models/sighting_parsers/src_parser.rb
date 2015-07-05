@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'htmlentities'
 
-class SRCParser
+class SightingParsers::SRCParser < SightingParsers::SightingParser
   URL = ENV.fetch('SRC_URL', 
                   'http://www.sharkresearchcommittee.com/pacific_coast_shark_news.htm')
 
@@ -11,11 +11,16 @@ class SRCParser
   def self.get_sightings_info
     sightings = []
 
-    doc = Nokogiri::HTML(open URL)
-    paragraphs = doc.css 'p'
-    candidate_paragraphs = possible_sightings paragraphs
-    sightings = candidate_paragraphs.map { |c| parse_possible_sighting(c) }
-    sightings.select { |s| !s.nil? }
+    begin 
+      doc = Nokogiri::HTML(open URL)
+      paragraphs = doc.css 'p'
+      candidate_paragraphs = possible_sightings paragraphs
+      sightings = candidate_paragraphs.map { |c| parse_possible_sighting(c) }
+      sightings.select! { |s| !s.nil? }
+    rescue OpenURI::HTTPError
+    end
+
+    sightings
   end
 
   private

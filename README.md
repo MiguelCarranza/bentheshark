@@ -19,5 +19,11 @@ rake db:migrate
 * You're good to go!
 
 
+### Run the tests
+```bash
+rake spec
+```
+
+
 
 
