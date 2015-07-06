@@ -27,7 +27,10 @@ gem 'pg', '~> 0.18.2'
 gem 'nokogiri', '~> 1.6.6'
 gem 'htmlentities', '~> 4.3.3'
 gem 'rspec-rails', '~> 3.0'
-gem 'webmock', '~>1.21.0'
+
+group :test do
+  gem 'webmock', '~>1.21.0'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
