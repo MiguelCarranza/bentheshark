@@ -1,10 +1,11 @@
 require 'rails_helper'
+include ApplicationHelper
 
 RSpec.describe TweetGenerator do
   describe 'formats date properly' do
     it 'today' do
       spot_name = 'The Hook!'
-      date = Date::today
+      date = today
       message = TweetGenerator.sighting_message spot_name, date
      
       expect(message.include? spot_name).to be true
@@ -13,7 +14,7 @@ RSpec.describe TweetGenerator do
 
     it 'yesterday' do
       spot_name = 'Ocean Beach'
-      date = Date::today - 1.days
+      date = today - 1.days
       message = TweetGenerator.sighting_message spot_name, date
      
       expect(message.include? spot_name).to be true
@@ -22,7 +23,7 @@ RSpec.describe TweetGenerator do
 
     it '2 days ago' do
       spot_name = 'Steamer Lane'
-      date = Date::today - 2.days
+      date = today - 2.days
       message = TweetGenerator.sighting_message spot_name, date
      
       expect(message.include? spot_name).to be true
@@ -31,7 +32,7 @@ RSpec.describe TweetGenerator do
 
     it '3 days ago' do
       spot_name = 'County Line'
-      date = Date::today - 3.days
+      date = today - 3.days
       message = TweetGenerator.sighting_message spot_name, date
      
       expect(message.include? spot_name).to be true
@@ -40,7 +41,7 @@ RSpec.describe TweetGenerator do
 
     it '4 days ago' do
       spot_name = 'Rincon'
-      date = Date::today - 4.days
+      date = today - 4.days
       message = TweetGenerator.sighting_message spot_name, date
      
       expect(message.include? spot_name).to be true
@@ -49,7 +50,7 @@ RSpec.describe TweetGenerator do
 
     it 'more than 4 days ago' do
       spot_name = 'Lower Trestles'
-      date = Date::today - 5.days
+      date = today - 5.days
       message = TweetGenerator.sighting_message spot_name, date
      
       expect(message.include? spot_name).to be true

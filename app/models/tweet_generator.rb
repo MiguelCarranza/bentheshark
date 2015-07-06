@@ -1,4 +1,5 @@
 include TweetsHelper
+include ApplicationHelper
 
 class TweetGenerator
   def self.sighting_message(spot, date)
@@ -16,7 +17,7 @@ class TweetGenerator
 
   private
   def self.process_date(date)
-    case (Date::today - date)
+    case (today - date)
     when 0
       'this morning'
     when 1
