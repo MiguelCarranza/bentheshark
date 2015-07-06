@@ -16,6 +16,12 @@ bundle install
 rake db:create
 rake db:migrate
 ```
+* Set the following environment variables accordingly:
+	* `TWITTER_CONSUMER_KEY`
+	* `TWITTER_CONSUMER_SECRET`
+	* `TWITTER_ACCESS_TOKEN`
+	* `TWITTER_ACCESS_SECRET`
+
 * You're good to go!
 
 

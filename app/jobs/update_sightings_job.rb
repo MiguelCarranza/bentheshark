@@ -19,3 +19,7 @@ class UpdateSightingsJob < BenJob
     log_info "#{new_sightings} new sightings added."
   end
 end
+
+if __FILE__ == $0
+  UpdateSightingsJob.new.perform
+end

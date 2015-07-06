@@ -27,6 +27,7 @@ gem 'pg', '~> 0.18.2'
 gem 'nokogiri', '~> 1.6.6'
 gem 'htmlentities', '~> 4.3.3'
 gem 'rspec-rails', '~> 3.0'
+gem 'twitter', '~> 5.14.0'
 
 group :test do
   gem 'webmock', '~>1.21.0'
