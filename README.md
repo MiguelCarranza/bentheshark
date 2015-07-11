@@ -5,7 +5,7 @@
 
 ### Configuration
 
-* Install **PostgreSQL** however you want. A good option if you're kind of clumsy with this things, and you work on OSX is [Postgres.app](http://postgresapp.com/) by @mattt.
+* Install **PostgreSQL** however you want. A good option if you're kind of clumsy with these things, and you work on OSX is [Postgres.app](http://postgresapp.com/) by @mattt.
 * Type this in your `psql` terminal:
 ```sql 
 CREATE USER ben_the_shark WITH createdb password 'sharky';
